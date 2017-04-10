@@ -6,19 +6,20 @@
 
   var createCatNameLine = function(name){
     var nameLine = document.createElement('li')
-    nameLine.innerText = name
+    nameLine.innerText = 'Name: ' + name
     return nameLine
   }
 
   var createCatFoodLine = function(faveFood){
     var foodLine = document.createElement('li')
-    foodLine.innerText = faveFood
+    foodLine.innerText = 'Favourite food: ' + faveFood
     return foodLine
   }
 
   var addCatImageLine = function(imgSource){
     var image = document.createElement('img')
     image.width = '500'
+    image.height = '300'
     image.src = imgSource
 
     var imageLine = document.createElement('li')
@@ -50,7 +51,6 @@
   {name: 'Barry', favFood: 'Turnip', img: 'http://s2.dmcdn.net/Ub1O8/1280x720-mCQ.jpg'}]
 
   app = function(){
-    // addCat("Barry", "whiskas", "http://s2.dmcdn.net/Ub1O8/1280x720-mCQ.jpg")
     cats.forEach(function(cat){
       addCat(cat.name, cat.favFood, cat.img)
     })
